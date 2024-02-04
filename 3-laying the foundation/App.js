@@ -1,46 +1,34 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: "myheading" },
-  "Hello World From REACT!"
-);
+// React Element   ===after render===> HTML element
 
-console.log(heading);
+const ele = React.createElement("h1", { id: "heading" }, "Simple string 🚀");
+
+//JSX
+
+const jsxEle = <h1 id="heading">Simple string 🚀</h1>;
+
+// console.log(ele, jsxEle);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(jsxEle);
+// multiline JSX
 
-//////////////////////////////////////////////////////////////
-////////////////////////////////Nested Elements
-//////////////////////////////////////////////////////////////
-const nestedElements = React.createElement(
-  "div",
-  { id: "parent" },
-
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h1", { id: "grandChild" }, "I am h1")
-  )
+const jsxEle2 = (
+  <h1 id="heading" className="" onClick={() => {}}>
+    Simple string 🚀
+  </h1>
 );
 
-const root2 = ReactDOM.createRoot(document.getElementById("root2"));
-root2.render(nestedElements);
+// React Functional component
 
-//////////////////////////////////////////////////////////////
-////////////////////////////////Sibling Elements
-//////////////////////////////////////////////////////////////
+const HeadingComponent = () => {
+  return <h1 id="heading">Simple string 🚀 React Functional component</h1>;
+};
 
-const SiblingElements = React.createElement(
-  "div",
-  { id: "parent" },
-
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", { id: "grandChild1" }, "I am h1"),
-    React.createElement("h2", { id: "grandChild2" }, "I am h2"),
-  ])
+const HeadingComponent2 = () => (
+  <h1 id="heading">Simple string 🚀 React Functional component2</h1>
 );
 
-const root3 = ReactDOM.createRoot(document.getElementById("root3"));
-root3.render(SiblingElements);
+root.render(<HeadingComponent />);
