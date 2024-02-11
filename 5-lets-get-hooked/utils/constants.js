@@ -1,9 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const cloudinaryURL =
-  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-data = [
+export const data = [
   {
     info: {
       id: "106673",
@@ -425,100 +420,9 @@ data = [
     },
   },
 ];
-// AppLayout
-//   Header
-//     Logo
-//     Navbar
-//     Cart
-//   Body
-//     Search
-//     Card container
-//       Restuarant CArds
-//   Footer
-//     Copyright
-//     Links
 
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo">
-        <img
-          className="logo-img"
-          src="https://cdn.pixabay.com/photo/2020/10/20/02/55/woman-5669334_1280.png"
-        ></img>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+export const cloudinaryURL =
+  "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-const RestuarantCard = ({
-  resName,
-  cuisine,
-  stars,
-  time,
-  imageURL,
-  costForTwo,
-}) => {
-  return (
-    <div className="res-card">
-      {console.log(data[0].info.avgRating, stars, imageURL)}
-      <img className="res-logo" alt="res-logo" src={imageURL}></img>
-      <h3>{resName}</h3>
-      <h4>{cuisine}</h4>
-      <h4>{`Cost For Two:- ${costForTwo}`}</h4>
-      <h4>{stars} Stars</h4>
-      <h4>{time} minutes</h4>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-
-      <div className="res-container">
-        {/* <RestuarantCard
-          resName={data[0].info.name}
-          cuisine={data[0].info.cuisines.join(", ")}
-          stars={data[0].info.avgRating}
-          time={data[0].info.sla.deliveryTime}
-          imageURL={cloudinaryURL + data[0].info.cloudinaryImageId}
-          costForTwo={data[0].info.costForTwo}
-        /> */}
-        {data.map((res) => (
-          <RestuarantCard
-            key={res.id}
-            resName={res.info.name}
-            cuisine={res.info.cuisines.join(", ")}
-            stars={res.info.avgRating}
-            time={res.info.sla.deliveryTime}
-            imageURL={cloudinaryURL + res.info.cloudinaryImageId}
-            costForTwo={res.info.costForTwo}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-const AppLayout = () => {
-  return (
-    <>
-      <div className="app">
-        <Header />
-        <Body />
-      </div>
-    </>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
+export const logoURL =
+  "https://cdn.pixabay.com/photo/2020/10/20/02/55/woman-5669334_1280.png";
