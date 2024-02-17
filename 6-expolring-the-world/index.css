@@ -32,6 +32,19 @@
 .res-card {
   height: 500px;
   width: 300px;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  margin: 3px 1px;
+}
+
+.shimmer-container {
+  display: flex;
+}
+
+.shimmer-card {
+  height: 500px;
+  width: 300px;
   background-color: #f0f0f0;
   text-align: center;
   padding: 5px;
@@ -50,4 +63,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+}
+
+.login-btn {
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
 }
