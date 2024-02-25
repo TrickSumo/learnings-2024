@@ -8,10 +8,6 @@ const Body = () => {
   const [resData, setResData] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("");
 
-  if (true) {
-    const [searchKeyword2, setSearchKeyword2] = useState("");
-  }
-
   useEffect(() => {
     console.log("Use Effect called");
     fetchData();
