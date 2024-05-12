@@ -1,4 +1,4 @@
-_-_ Any html tag can be replaced by motion.tagName and can be animated using "animate" property
+- Any html tag can be replaced by motion.tagName and can be animated using "animate" property
 
 <motion.div
 className="home container"
@@ -32,7 +32,6 @@ transition={{
           stiffness: 999,
         }} >
 
-<h1>Pizza Joint</h1>
 </motion.div>
 
 - We can animate while hovering. Just use whileHover porperty instead of hover
